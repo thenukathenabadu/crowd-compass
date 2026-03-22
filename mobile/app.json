@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Crowd Compass",
+    "slug": "crowd-compass",
+    "version": "1.0.0",
+    "scheme": "crowdcompass",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.crowdcompass.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Crowd Compass uses your location to measure and display energy at your current spot.",
+        "NSMicrophoneUsageDescription": "Crowd Compass measures ambient noise to calculate the energy level around you."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.crowdcompass.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      },
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Crowd Compass uses your location to show energy at your current spot."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Crowd Compass measures ambient noise to calculate the energy level around you."
+        }
+      ],
+      "react-native-maps"
+    ]
+  }
+}
