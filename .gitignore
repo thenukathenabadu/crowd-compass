@@ -1,0 +1,26 @@
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/build/
+mobile/ios/build/
+mobile/ios/Pods/
+mobile/.expo-shared/
+
+# Backend
+backend/__pycache__/
+backend/.venv/
+backend/venv/
+backend/.env
+backend/*.egg-info/
+backend/alembic/versions/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# General
+.DS_Store
+*.log
+.idea/
+.vscode/
